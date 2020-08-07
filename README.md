@@ -45,7 +45,39 @@ You won’t be able to index your website on search engines because search engin
               { applicationComponents }
           </div>
       </Router>
+      
+      
+ # { withRoute } component ||  @withRouter decorator 
+
+Once creator wants to create a separate LoginForm component. But there is a downside for that. Since LoginForm component is rendered by us and not Route component of React Router, it will not receive those fancy props. This is where withRouter HOC, higher-order-component jumps into our brain.
+
+
+    import { withRouter } from 'react-router-dom';
     
+    
+    class LoginForm extends React.Component{ ... }
+    
+    
+    const LoginFormWithProps = withRouter(LoginForm)
+    
+    class Login extends React.Component {
+    
+        render() {
+             <div>
+                 <h3>Please sign in.</h3>
+                 <LoginFormWithProps></LoginFormWithProps>
+             </div>
+        }
+        
+    }
+    
+You can also use @withRouter decorator instead of creating new component LoginFormWithProps which is neat.
+
+For those who wants to know how React Router injects these props to the LoginForm component, basically React Router wraps the LoginForm component with Route component. Problem solved :).
+
+I guess that’s pretty much it with React Router. There might be other small-small things which could be useful while writing an application with React Router, so if you find any, let me know in comments below. You should also check out react-router-server package which is used for server side rendering.
+I have created a git repository with above code samples. Click below link to get it, don’t wait :)
+
  # Ref Doc
  
  https://medium.com/jspoint/basics-of-react-router-v4-336d274fd9e0
