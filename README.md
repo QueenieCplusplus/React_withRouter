@@ -12,6 +12,9 @@ Since React works with only components, React Router v4 is component based. Reac
  
 As we discussed, application has to change the view (UI) based on the URL in the browser, but URL can be of different format. URL can be path based like domain/path/nested-path or hash based like domain/#/path/nested-path.
  
+ 
+# Hash Based Router 
+
 When hash based URL changes, browser does not reload the page, React Router uses history API. Browser implements this API internally, for things like when you click on an anchor tag and browser loads different page based on different URL, entry of this changed URL is added to the history. Using History API, we can directly manipulate URL in the browser without the page reload.
 
 An important thing to remember is, in case of path based routing, a web server needs to be configed to load only one page (e.g. index.html) for any kind of URL. 
