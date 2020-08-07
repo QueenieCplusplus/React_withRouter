@@ -13,7 +13,9 @@ Since React works with only components, React Router v4 is component based. Reac
 As we discussed, application has to change the view (UI) based on the URL in the browser, but URL can be of different format. URL can be path based like domain/path/nested-path or hash based like domain/#/path/nested-path.
  
  
-# Hash Based Router 
+# Hash Based Router (history api)
+
+     this.props.history
 
 When hash based URL changes, browser does not reload the page, React Router uses history API. Browser implements this API internally, for things like when you click on an anchor tag and browser loads different page based on different URL, entry of this changed URL is added to the history. Using History API, we can directly manipulate URL in the browser without the page reload.
 
@@ -29,7 +31,7 @@ You won’t be able to index your website on search engines because search engin
  
  React Router (react-router-dom) provided { BrowserRouter } and { HashRouter } components which is starting point of your application. As we are using BrowserRouter (path based), we will import it like below in index.js.
     
-    import { BrowserRouter as Router } from 'react-router-dom';
+     import { BrowserRouter as Router } from 'react-router-dom';
  
  We have created an alias above because in future, if we had to implement HashRouter, we have to change it at one place only.
  
@@ -38,11 +40,11 @@ You won’t be able to index your website on search engines because search engin
 
 ★ Code Base
     
-    <Router>
-        <div>
-            { applicationComponents }
-        </div>
-    </Router>
+      <Router>
+          <div>
+              { applicationComponents }
+          </div>
+      </Router>
     
  # Ref Doc
  
