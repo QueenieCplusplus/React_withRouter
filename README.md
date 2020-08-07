@@ -25,3 +25,7 @@ this.props.history &amp; hash route such as hash tag to avoid reload page
             { applicationComponents }
         </div>
     </Router>
+    
+ # Ref Doc
+ 
+ https://medium.com/jspoint/basics-of-react-router-v4-336d274fd9e0
