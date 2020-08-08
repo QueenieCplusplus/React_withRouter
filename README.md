@@ -47,7 +47,7 @@ You won’t be able to index your website on search engines because search engin
       </Router>
       
       
- # { withRoute } component ||  @withRouter decorator 
+ # { withRouter } component ||  @withRouter decorator 
 
 Once creator wants to create a separate LoginForm component. But there is a downside for that. Since LoginForm component is rendered by us and not Route component of React Router, it will not receive those fancy props. This is where withRouter HOC, higher-order-component jumps into our brain.
 
